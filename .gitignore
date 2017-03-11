@@ -9,9 +9,9 @@ Desktop.ini
 $RECYCLE.BIN/
 
 #node_modules
-/library-components/library-builder
+/library-components/library-builder/node_modules
 /aot-compatible-components/node_modules
-
+/library-components/node_modules
 # Windows Installer files
 *.cab
 *.msi
