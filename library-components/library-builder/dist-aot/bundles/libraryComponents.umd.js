@@ -4,45 +4,50 @@
 	(factory((global.ng = global.ng || {}, global.ng.amazing = global.ng.amazing || {}),global.ng.core));
 }(this, (function (exports,_angular_core) { 'use strict';
 
-var GridViewComponent = (function () {
+var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+exports.GridViewComponent = (function () {
     function GridViewComponent() {
     }
     GridViewComponent.prototype.ngOnInit = function () {
     };
-    GridViewComponent.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'app-grid-view',
-                    template: "<p>\nTesting Libray component\n</p>\n",
-                    styles: [""]
-                },] },
-    ];
-    /** @nocollapse */
-    GridViewComponent.ctorParameters = function () { return []; };
     return GridViewComponent;
 }());
+exports.GridViewComponent = __decorate$1([
+    _angular_core.Component({
+        selector: 'app-grid-view',
+        template: "<p>\nTesting Libray component\n</p>\n",
+        styles: [""]
+    })
+], exports.GridViewComponent);
 
-var GridViewModule = (function () {
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+exports.GridViewModule = (function () {
     function GridViewModule() {
     }
-    GridViewModule.decorators = [
-        { type: _angular_core.NgModule, args: [{
-                    declarations: [
-                        GridViewComponent
-                    ],
-                    imports: [],
-                    providers: [],
-                    exports: [GridViewComponent]
-                },] },
-    ];
-    /** @nocollapse */
-    GridViewModule.ctorParameters = function () { return []; };
     return GridViewModule;
 }());
+exports.GridViewModule = __decorate([
+    _angular_core.NgModule({
+        declarations: [
+            exports.GridViewComponent
+        ],
+        imports: [],
+        providers: [],
+        exports: [exports.GridViewComponent]
+    })
+], exports.GridViewModule);
 
 // to keep it AoT compatible
-
-exports.GridViewModule = GridViewModule;
-exports.GridViewComponent = GridViewComponent;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

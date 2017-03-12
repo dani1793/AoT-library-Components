@@ -13,7 +13,7 @@
     "transpile": "ngc -p src/tsconfig-aot.json",
     "package": "rollup -c",
     "minify": "uglifyjs dist-aot/bundles/libraryComponents.umd.js --screw-ie8 --compress --mangle --comments --output dist-aot/bundles/libraryComponents.umd.min.js",
-    "build": "npm run inline && npm run transpile && npm run package && npm run minify"
+    "build": "gulp clean:dist && npm run inline && gulp clean:dist-aot && npm run transpile && gulp clean:dist && gulp create-dist --folderName grid-view && npm run package && npm run minify"
   },
   "private": true,
   "dependencies": {
@@ -36,7 +36,9 @@
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.28.3",
     "codelyzer": "~2.0.0-beta.1",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
@@ -50,6 +52,7 @@
     "ts-node": "1.2.1",
     "tslint": "^4.3.0",
     "typescript": "~2.0.3",
-    "uglify-js": "^2.7.5"
+    "uglify-js": "^2.7.5",
+    "yargs": "^7.0.2"
   }
 }
