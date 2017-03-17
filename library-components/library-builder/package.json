@@ -13,7 +13,7 @@
     "transpile": "ngc -p src/tsconfig-aot.json",
     "package": "rollup -c",
     "minify": "uglifyjs dist-aot/bundles/libraryComponents.umd.js --screw-ie8 --compress --mangle --comments --output dist-aot/bundles/libraryComponents.umd.min.js",
-    "build": "gulp clean:dist && npm run inline && gulp clean:dist-aot && npm run transpile && gulp clean:dist && gulp create-dist --folderName grid-view && npm run package && npm run minify"
+    "build": "gulp clean:dist && npm run inline && gulp clean:dist-aot && npm run transpile && gulp clean:dist && gulp create-dist --folderName grid-view && npm run package && npm run minify && gulp clean:dist-aot"
   },
   "private": true,
   "dependencies": {
@@ -46,6 +46,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
+    "merge-stream": "^1.0.1",
     "ng2-inline-template": "^0.1.1",
     "protractor": "~4.0.13",
     "rollup": "^0.41.4",

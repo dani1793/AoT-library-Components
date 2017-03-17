@@ -9,4 +9,3 @@ The build system is still in progress but the steps done so far are as follows:
 2. compile the component using AoT compiler
 3. clean the compiled version
 4. copy package.json to make the component shipable
- 
